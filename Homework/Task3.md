@@ -1,37 +1,43 @@
-# Unit 5.3 M1 Task 2
-Note: Your solution should have O(n) time complexity, where n is the number of elements in l, since this is what you will be asked to accomplish in an interview.
+# Unit 5.3 M1 Task 3
 
-You have a singly linked list l, which is sorted in strictly increasing order, and an integer value. Add value to the list l, preserving its original sorting.
+## Instructions
+### Note: 
+- Your solution should have O(n) time complexity, where n is the number of elements in l, since this is what you will be asked to accomplish in an interview.
 
-Note: in examples below and tests preview linked lists are presented as arrays just for simplicity of visualization: in real data you will be given a head node l of the linked list
+- You have a singly linked list l, which is sorted in strictly increasing order, and an integer value. Add value to the list l, preserving its original sorting.
 
-Example
+### Note: 
+- in examples below and tests preview linked lists are presented as arrays just for simplicity of visualization: in real data you will be given a head node l of the linked list
 
-For l = [1, 3, 4, 6] and value = 5, the output should be
+## Example
+
+- For l = [1, 3, 4, 6] and value = 5, the output should be
 insertValueIntoSortedLinkedList(l, value) = [1, 3, 4, 5, 6];
-For l = [1, 3, 4, 6] and value = 10, the output should be
+- For l = [1, 3, 4, 6] and value = 10, the output should be
 insertValueIntoSortedLinkedList(l, value) = [1, 3, 4, 6, 10];
-For l = [1, 3, 4, 6] and value = 0, the output should be
-insertValueIntoSortedLinkedList(l, value) = [0, 1, 3, 4, 6].
-Input/Output
+- For l = [1, 3, 4, 6] and value = 0, the output should be
+- insertValueIntoSortedLinkedList(l, value) = [0, 1, 3, 4, 6].
 
-[execution time limit] 4 seconds (py3)
 
-[input] linkedlist.integer l
+## Input/Output
 
-A singly linked list of integers sorted in strictly increasing order. Thus, all integers in the list are pairwise distinct.
+- [execution time limit] 4 seconds (py3)
 
-Guaranteed constraints:
-0 ≤ list size ≤ 104,
--109 ≤ element value ≤ 109.
+- [input] linkedlist.integer 
 
-[input] integer value
+  - A singly linked list of integers sorted in strictly increasing order. Thus, all integers in the list are pairwise distinct.
 
-A single integer value to be inserted into l. It is guaranteed that there is not an element equal to value in l before the insertion is performed.
+  - Guaranteed constraints:
+    - 0 ≤ list size ≤ 104,
+    - -109 ≤ element value ≤ 109.
 
-Guaranteed constraints:
--109 ≤ value ≤ 109.
+- [input] integer value
 
-[output] linkedlist.integer
+  - A single integer value to be inserted into l. It is guaranteed that there is not an element equal to value in l before the insertion is performed.
 
-Return l after inserting value into it, with the original sorting preserved.
+  - Guaranteed constraints:
+    - -10^9 ≤ value ≤ 10^9.
+
+- [output] linkedlist.integer
+
+  - Return l after inserting value into it, with the original sorting preserved.
