@@ -8,3 +8,5 @@
 2. costly search operation
 3. costly operations at the ends of the list (head and tail)
 4. Thier size is not flexible. 
+
+## My Solution choice 2 costly search operation
