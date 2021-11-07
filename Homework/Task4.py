@@ -4,7 +4,7 @@
 #     self.value = x
 #     self.next = None
 #
-def mergeTwoLinkedLists(l1, l2):
+def mergeTwoLinkedLists(L1, L2):
     pass
 """
 tests
