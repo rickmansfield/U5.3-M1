@@ -4,12 +4,13 @@ class LinkedListNode:
     - value => A value held in the node
     - next => A reference to the next node in the chain
     """
-def __init__(self, value):
-    self.value = value
-    self.next = None
+    def __init__(self, value):
+        self.value = value
+        self.next = None
 
-def __str__(self):
-    return f"[{self.value}]->{self.next}"
+    def __str__(self):
+        # return self.__repr__()
+        return f"[{self.value}]->{self.next}"
 
 l = LinkedListNode(3)
 l.next = LinkedListNode(7)

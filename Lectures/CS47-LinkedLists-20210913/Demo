@@ -1,0 +1,84 @@
+"""
+Given a reference to the head node of a singly-linked list, write a function
+that reverses the linked list in place. The function should return the new head
+of the reversed list.
+In order to do this in O(1) space (in-place), you cannot make a new list, you
+need to use the existing nodes.
+In order to do this in O(n) time, you should only have to traverse the list
+once.
+*Note: If you get stuck, try drawing a picture of a small linked list and
+running your function by hand. Does it actually work? Also, don't forget to
+consider edge cases (like a list with only 1 or 0 elements).*
+
+- set current_node to the head_of_list
+- set prev_node to None
+- set next_node to None
+
+- while the current_node is not none
+  set next_node to current_node.next
+  set current_node.next to prev_node
+  set prev_node to current_node
+  set current_node to next_node
+
+- return prev_node
+
+# a, b
+
+# c = a
+# a = b
+# b = c
+
+"""
+
+
+class LinkedListNode:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+    # def __str__(self):
+    #   return f"[{self.value}]->{self.next}"
+
+# def reverse(head_of_list):
+#   pass
+
+# def reverse(head_of_list):
+#     a = head_of_list
+#     b = a.next
+#     while a.next is not None:
+#         current_next = a.next
+#         a.next = None
+#         next_next = b.next
+#         b.next = a
+#         a = next_next
+#     return head_of_list
+
+
+def reverse(head_of_list):
+    current_node = head_of_list
+    prev_node = None
+    next_node = None
+
+    while current_node is not None:
+        next_node = current_node.next
+        current_node.next = prev_node
+        prev_node = current_node
+        current_node = next_node
+
+    return prev_node
+
+
+l = LinkedListNode(3)
+l.next = LinkedListNode(7)
+l.next.next = LinkedListNode(2)
+# arr = [l, l.next, l.next.next]
+current = l
+while current:
+    print(current.value)
+    current = current.next
+l = reverse(l)
+print()
+current = l
+while current:
+    print(current.value)
+    current = current.next
