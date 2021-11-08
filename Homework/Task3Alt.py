@@ -22,6 +22,9 @@ def insertValueIntoSortedLinkedList(l, value):
         else:
             # else create a temp value for the current list item and the previous set to None
             temp, prev = l, None
+                    #same as 
+                    #temp = 1
+                    #prev = None
             # while the there is a next item and current item value is less
             # than the value iterate
             while temp.next and temp.value <= value:

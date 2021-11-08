@@ -10,18 +10,41 @@ l4 = ListNode(5)
 l1.next = l2
 l2.next = l3
 l1.next.next.next = l4 # same ast l3.next=l4
+
+i.e. 
+in codeSignal # Singly-linked lists are already defined with this interface:(see class below)
 """
-# Singly-linked lists are already defined with this interface:
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.value = x
-#         self.next = None
-
-
-
-
+class ListNode(object):
+    def __init__(self, x):
+        self.value = x
+        self.next = None
 
 def insertValueIntoSortedLinkedList(l, value):
+
+    node = ListNode(value)
+    
+    #EDGE
+    if l == None:
+        return node
+    #FRONT
+    if value < l.value:
+        node.next = l
+        return node
+        
+    else: #Middle
+        cur, prev = l, None
+        while cur.next and cur.value <= value:
+            prev = cur
+            cur = prev.next
+        
+        #END if value is bigger than last number
+        if cur.next == None and cur.value <= value:
+            cur.next = node
+        else: 
+            node.next = prev.next
+            prev.next = node
+        return l
+    
     
 
 
