@@ -33,12 +33,12 @@ def insertValueIntoSortedLinkedList(l, value):
         
     else: #Middle
         cur, prev = l, None
-        while cur.next and cur.value <= value:
+        while value >= cur.value and cur.next:
             prev = cur
             cur = prev.next
         
         #END if value is bigger than last number
-        if cur.next == None and cur.value <= value:
+        if value >= cur.value and cur.next == None:
             cur.next = node
         else: 
             node.next = prev.next
