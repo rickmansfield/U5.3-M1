@@ -4,8 +4,27 @@
 #     self.value = x
 #     self.next = None
 #
-def mergeTwoLinkedLists(L1, L2):
-    pass
+def mergeTwoLinkedLists(l1, l2):
+    mergedList = ListNode(0)
+    end = mergedList
+    
+    # while True:
+    #     if l1 is None:
+    #         end.next = l2
+    #         break
+    #     if l2 is None:
+    #         end.next = l1
+    #         break
+    while l1 and l2:
+        if l1.value <= l2.value:
+            mergedList.next = l1
+            l1 = l1.next
+        else: 
+            mergedList.next = l2
+            l2 = l2.next
+        mergedList = mergedList.next
+    return end.next
+
 """
 tests
 """

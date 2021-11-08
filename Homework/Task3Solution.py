@@ -33,7 +33,7 @@ def insertValueIntoSortedLinkedList(l, value):
         
     else: #Middle
         cur, prev = l, None
-        #while the new value > current value being evaluated and cur.next is true(there are other values to follow) do something
+        #while the new value > current value being evaluated and cur.next is true(there are other values to follow) ...do something
         while value >= cur.value and cur.next:
             prev = cur
             cur = prev.next

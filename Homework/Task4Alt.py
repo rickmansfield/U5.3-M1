@@ -1,9 +1,4 @@
-def mergeTwoLinkedLists(l1, l2)
-# Singly-linked lists are already defined with this interface:
-class ListNode(object):
-    def __init__(self, x):
-        self.value = x
-        self.next = None
+def mergeTwoLinkedLists(l1, l2):
     # create empty node to hold the new merged list
     merged_node = ListNode(0)
     # end will hold the end node
