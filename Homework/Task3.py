@@ -3,7 +3,17 @@ class ListNode(object):
     def __init__(self, x):
         self.value = x
         self.next = None
-#
+
+l1 = ListNode(1)
+l2 = ListNode(3)
+l3 = ListNode(4)
+l4 = ListNode(5)
+l1.next = l2
+l2.next = l3
+l1.next.next.next = l4 # same ast l3.next=l4
+
+
+
 def insertValueIntoSortedLinkedList(l, value):
     pass
 
