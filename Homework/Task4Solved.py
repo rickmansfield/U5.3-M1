@@ -22,7 +22,7 @@ def mergeTwoLinkedLists(l1, l2):
         else: 
             mergedList.next = l2
             l2 = l2.next
-        mergedList = mergedList.next
+    mergedList = mergedList.next
     return end.next
 
 """
