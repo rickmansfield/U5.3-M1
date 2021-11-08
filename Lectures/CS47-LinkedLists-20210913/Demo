@@ -54,10 +54,13 @@ class LinkedListNode:
 #     return head_of_list
 
 
-def reverse(head_of_list):
+def reverse(head_of_list): # O(n) time, O(1) space
     current_node = head_of_list
     prev_node = None
     next_node = None
+    
+    if current_node.next is None: 
+        return l
 
     while current_node is not None:
         next_node = current_node.next
