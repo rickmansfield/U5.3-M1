@@ -32,8 +32,10 @@ def insertValueIntoSortedLinkedList(l, value):
         return node
         
     else: #Middle
-        cur, prev = l, None
-        #while the new value > current value being evaluated and cur.next is true(there are other values to follow) ...do something
+        cur = l
+        prev = None
+        # cur, prev = l, None
+        #while the new value > current value being evaluated and cur.next is true(there are other values to follow) ...do something... in this case set prev = cur and cur = prev.next
         while value >= cur.value and cur.next:
             prev = cur
             cur = prev.next
