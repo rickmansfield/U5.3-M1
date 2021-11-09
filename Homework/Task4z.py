@@ -34,3 +34,5 @@ def mergeTwoLinkedLists(l1, l2):
                 prev = cur2
                 cur2 = cur2.next
     return new_head
+
+print(mergeTwoLinkedLists([0, 1, 2], [3, 4, 5]))
