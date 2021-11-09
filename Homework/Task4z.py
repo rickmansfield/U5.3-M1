@@ -1,3 +1,8 @@
+class ListNode(object):
+  def __init__(self, x):
+    self.value = x
+    self.next = None
+    
 def mergeTwoLinkedLists(l1, l2):
     cur1, cur2 = l1, l2
     new_head, prev = None, None

@@ -19,6 +19,7 @@ class ListNode(object):
         self.value = x
         self.next = None
 
+
 def insertValueIntoSortedLinkedList(l, value):
 
     node = ListNode(value)
@@ -48,10 +49,10 @@ def insertValueIntoSortedLinkedList(l, value):
             prev.next = node
         return l
     
-    
 
 
-# print(insertValueIntoSortedLinkedList([1, 3, 4, 5, 6], 5)) # [1, 3, 4, 5, 6]
+
+print(insertValueIntoSortedLinkedList([1, 3, 4, 5, 6], 5)) # [1, 3, 4, 5, 6]
 # print(insertValueIntoSortedLinkedList([1, 3, 4, 6], 10)) # [1, 3, 4, 6, 10]
 # print(insertValueIntoSortedLinkedList([1, 3, 4, 6], 0)) # [0, 1, 3, 4, 6]
 # print(insertValueIntoSortedLinkedList([], 239)) # [239]
