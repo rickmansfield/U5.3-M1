@@ -2,24 +2,27 @@ class ListNode(object):
     def __init__(self, x):
         self.value = x
         self.next = None
-
-def mergeTwoLinkedLists(l1, l2):
-    if l1 == None: return l2
-    if l2 == None: return l1
-    if l1.value < l2.value:
-        head_node = l1
-        l1 = l1.next
-    else:
-        head_node = l2
-        l2 = l2.next
-    current = head_node
-    while l1 and l2:
-        if l1.value <= l2.value:
-            current.next = l1
-            l1 = l1.next
-        else:
-            current.next = l2
-            l2 = l2.next
-        current = current.next
-    current.next = l1 or l2
-    return head_node
+        
+def insertValueIntoSortedLinkedList(l, value):
+    # Create a new node with a value of "value"
+    newNode = ListNode(value)
+    # Edge case: Handle node with None type / empty list
+    if l == None:
+        return newNode
+    current_node = l
+    # Case: Insert new node at begining of list
+    if newNode.value < current_node.value:
+        newNode.next = current_node
+        return newNode
+    # Case: Insert new node somewhere in the middle
+    # Traverse through list 
+    while current_node.next != None:
+        # print(current_node.value)
+        if newNode.value > current_node.value and newNode.value < current_node.next.value:
+            newNode.next = current_node.next
+            current_node.next = newNode
+            return l
+        current_node = current_node.next
+    # Case: Insert new node at end of list
+    current_node.next = newNode
+    return l

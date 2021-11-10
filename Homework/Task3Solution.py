@@ -19,6 +19,18 @@ class ListNode(object):
         self.value = x
         self.next = None
 
+def printLinkedList(head_node):
+    if head_node is None:
+        print("Nothing there")
+        
+    current_node = head_node
+    ans = ""
+    
+    while current_node is not None:
+        ans = ans + f"[{current_node.value}]->"
+        current_node = current_node.next
+    return ans
+
 
 def insertValueIntoSortedLinkedList(l, value):
 
@@ -26,11 +38,11 @@ def insertValueIntoSortedLinkedList(l, value):
     
     #EDGE
     if l == None:
-        return node
+        return printLinkedList(node)
     #FRONT
     if value < l.value:
         node.next = l
-        return node
+        return printLinkedList(node)
         
     else: #Middle
         cur = l
@@ -47,12 +59,18 @@ def insertValueIntoSortedLinkedList(l, value):
         else: 
             node.next = prev.next
             prev.next = node
-        return l
+        return printLinkedList(l)
     
 
+l1 = ListNode(1)
+l2 = ListNode(3)
+l3 = ListNode(4)
+l4 = ListNode(6)
+l1.next = l2
+l2.next = l3
+l3.next = l4
 
-
-print(insertValueIntoSortedLinkedList([1, 3, 4, 5, 6], 5)) # [1, 3, 4, 5, 6]
+print(insertValueIntoSortedLinkedList(l1, 5)) # [1, 3, 4, 5, 6]
 # print(insertValueIntoSortedLinkedList([1, 3, 4, 6], 10)) # [1, 3, 4, 6, 10]
 # print(insertValueIntoSortedLinkedList([1, 3, 4, 6], 0)) # [0, 1, 3, 4, 6]
 # print(insertValueIntoSortedLinkedList([], 239)) # [239]

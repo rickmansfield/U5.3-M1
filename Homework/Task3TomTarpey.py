@@ -10,10 +10,10 @@ class ListNode(object):
         self.next = None
         
 def insertValueIntoSortedLinkedList(l, value):
-    new_node = listNode(value)
+    new_node = ListNode(value)
     
     #edge
-    if not l == None:
+    if l == None:
         return new_node
     
     #front
@@ -21,15 +21,15 @@ def insertValueIntoSortedLinkedList(l, value):
         new_node = l
         return new_node
     #middile
-    current = l
-    while current.next is not None:
-        if value < current.next.value:
-            new_node.next = current.next
-            current.next = new_node
+    current_node = l
+    while current_node.next is not None:
+        if value < current_node.next.value:
+            new_node.next = current_node.next
+            current_node.next = new_node
             return l
         
-        current = current.next
+        current_node = current_node.next
         
     # end 
-    current.next = new_node
+    current_node.next = new_node
     return l
