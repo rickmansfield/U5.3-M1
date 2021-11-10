@@ -1,16 +1,6 @@
 """
 WARNING this code doesn't work in VS Code without defining the nodes. 
-It was desiged to be used with CodeSignal IDE where they are already defined
-
-Example:
-l1 = ListNode(1)
-l2 = ListNode(3)
-l3 = ListNode(4)
-l4 = ListNode(5)
-l1.next = l2
-l2.next = l3
-l1.next.next.next = l4 # same ast l3.next=l4
-
+and creating a local print function to call here. 
 i.e. 
 in codeSignal # Singly-linked lists are already defined with this interface:(see class below)
 """
